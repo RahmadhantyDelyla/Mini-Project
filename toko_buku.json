@@ -1,0 +1,17 @@
+{
+    "nama_toko": "Toko Buku ABC",
+    "pengarang": "Joni",
+    "alamat": "Jl. Contoh No. 123",
+    "koleksi_buku": [
+        {
+            "judul": "Harry Potter",
+            "pengarang": "J.K. Rowling",
+            "tahun_terbit": 1997
+        },
+        {
+            "judul": "Lord of the Rings",
+            "pengarang": "J.R.R. Tolkien",
+            "tahun_terbit": 1954
+        }
+    ]
+}

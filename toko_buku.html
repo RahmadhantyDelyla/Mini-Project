@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toko Buku</title>
+</head>
+<body>
+<div id="info"></div>
+<div id="books"></div>
+
+<script>
+    var data = {
+        "nama_toko": "Toko Buku ABC",
+        "pengarang": "Joni",
+        "alamat": "Jl. Contoh No. 123",
+        "koleksi_buku": [
+            {
+                "judul": "Harry Potter",
+                "pengarang": "J.K. Rowling",
+                "tahun_terbit": 1997
+            },
+            {
+                "judul": "Lord of the Rings",
+                "pengarang": "J.R.R. Tolkien",
+                "tahun_terbit": 1954
+            }
+        ]
+    };
+
+    displayInfo(data);
+    displayBooks(data.koleksi_buku);
+
+    function displayInfo(data) {
+        var infoDiv = document.getElementById("info");
+        infoDiv.innerHTML = "<h2>" + data.nama_toko + "</h2>" +
+                            "<p>Pengarang: " + data.pengarang + "</p>" +
+                            "<p>Alamat: " + data.alamat + "</p>";
+    }
+
+    function displayBooks(books) {
+        var booksDiv = document.getElementById("books");
+        var table = "<table border='1'><tr><th>Judul</th><th>Pengarang</th><th>Tahun Terbit</th></tr>";
+        for (var i = 0; i < books.length; i++) {
+            table += "<tr><td>" + books[i].judul + "</td><td>" + books[i].pengarang + "</td><td>" + books[i].tahun_terbit + "</td></tr>";
+        }
+        table += "</table>";
+        booksDiv.innerHTML = table;
+    }
+</script>
+</body>
+</html>
